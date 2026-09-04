@@ -38,7 +38,7 @@ class RelayError(Exception):
 
 
 def recvall(sock, data_len):
-    buf = ''
+    buf = b''
     while True:
         buf += sock.recv(data_len - len(buf))
         if len(buf) == data_len:
